@@ -14,7 +14,7 @@ server.use("/greet/:name", (req, res) => {
     res.status(200).send(`<h1>${greeting} ${req.params.name}</h1>`);
 });
 
-server.use("/menu:/:food", (req, res) => {
+server.use("/menu/:food", (req, res) => {
     const dujour = process.env.DUJOUR || "DuJour"
     res.status(200).send(`<h2>${req.params.food} is our special ${dujour}`)
 })
